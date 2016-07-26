@@ -28,10 +28,11 @@ app.post('/post', function(req, res){
     if (!error && response.statusCode == 200){
       var data = JSON.parse(body);
       var first_url = data.response.hits[0].result.url;
+      var temp = data["temp"];
 
       var body = {
         response_type: "temp",
-        text: first_url
+        text: temp
       };
 
       res.send(body);
