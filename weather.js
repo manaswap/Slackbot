@@ -18,7 +18,7 @@ app.post('/post', function(req, res){
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
     query: {
       zip: req.body.text
-      appid: provess.env.WEATHER_ACCESS,
+      appid: process.env.WEATHER_ACCESS,
     }
   });
 
