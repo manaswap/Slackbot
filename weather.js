@@ -13,8 +13,6 @@ app.get('/', function(req, res){
   res.send('It Works!');
 });
 
-//__________________________________________________
-
 app.post('/post', function(req, res){
   var parsed_url = url.format({
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
