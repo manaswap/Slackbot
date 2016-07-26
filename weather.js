@@ -18,22 +18,16 @@ app.post('/post', function(req, res){
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
     query: {
       zip: req.body.text
-      appid: provess.env.warn.WEATHER_ACCESS,
+      appid: provess.env.WEATHER_ACCESS,
     }
   });
 
   request(parsed_url, function(error, response, body){
     if (!error && response.statusCode == 200){
       var data = JSON.parse(body);
-      var first_url = data.response.hits[0].result.url;
       var temp = data["temp"];
 
-      var body = {
-        response_type: "temp",
-        text: temp
-      };
-
-      res.send(body);
+      res.send(main.temp);
     }
   });
 });
