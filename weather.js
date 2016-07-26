@@ -25,9 +25,9 @@ app.post('/post', function(req, res){
   request(parsed_url, function(error, response, body){
     if (!error && response.statusCode == 200){
       var data = JSON.parse(body);
-      var temp = data["temp"];
+      var temp = data["main"]["temp"];
 
-      res.send(main.temp);
+      res.send(temp);
     }
   });
 });
