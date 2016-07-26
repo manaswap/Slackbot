@@ -9,8 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true}));
 
 app.set('port', (process.env.PORT || 9001));
 
-app.set('port', 8080);
-
 app.get('/', function(req, res){
   res.send('It Works!');
 });
@@ -32,7 +30,7 @@ app.post('/post', function(req, res){
       var first_url = data.response.hits[0].result.url;
 
       var body = {
-        response_type: "in_channel",
+        response_type: "temp",
         text: first_url
       };
 
