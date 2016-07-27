@@ -1,5 +1,5 @@
 {
-  "name": "weather",
+  "name": "slack-genius",
   "version": "1.0.0",
   "description": "_A Slackbot that searches genius.com_",
   "main": "weather.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git",
+    "url": "git+https://github.com/mager/slack-genius.git"
   },
   "author": "",
   "license": "ISC",
