@@ -19,4 +19,8 @@
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mager/slack-genius/issues"
+  },
+  "homepage": "https://github.com/mager/slack-genius#readme"
 }
