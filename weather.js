@@ -17,8 +17,8 @@ app.post('/post', function(req, res){
   var parsed_url = url.format({
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
     query: {
-      zip: req.body.text,
-      appid: process.env.WEATHER_ACCESS
+      zip: req.body.zip,
+      appid: process.env.WEATHER_ACCESS,
     }
   });
 
@@ -27,7 +27,7 @@ app.post('/post', function(req, res){
       var data = JSON.parse(body);
       var temp = data["main"]["temp"];
 
-      res.send(temp);
+      res.sendStatus(temp);
     }
   });
 });
