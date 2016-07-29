@@ -14,11 +14,11 @@ app.get('/', function(req, res){
 });
 
 app.post('/post', function(req, res){
-  console.log(JSON.parse(req.body)["text"]);
+  console.log(req.body["text"]);
   var parsed_url = url.format({
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
     query: {
-      zip: JSON.parse(req.body)["text"],
+      zip: req.body["text"],
       appid: "3b7e435828f38aa1b7200e047079cf71",
     }
   });
