@@ -27,7 +27,7 @@ app.post('/post', function(req, res){
       var data = JSON.parse(body);
       var temp = data["main"]["temp"];
 
-      res.status(200).send(temp);
+      res.status(200).send({text: temp});
     }
   });
 });
