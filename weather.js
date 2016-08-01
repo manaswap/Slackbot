@@ -18,7 +18,7 @@ app.post('/post', function(req, res){
     pathname: 'http://api.openweathermap.org/data/2.5/weather',
     query: {
       zip: req.body["text"],
-      appid: "3b7e435828f38aa1b7200e047079cf71",
+      appid: process.env.WEATHER_ACCESS,
     }
   });
 
