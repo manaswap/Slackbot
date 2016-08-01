@@ -27,7 +27,12 @@ app.post('/post', function(req, res){
       var data = JSON.parse(body);
       var temp = data["main"]["temp"];
 
-      res.send({text: temp});
+      var body = {
+        response_type: "in_channel",
+        text: temp
+      };
+
+      res.send(body);
     }
   });
 });
